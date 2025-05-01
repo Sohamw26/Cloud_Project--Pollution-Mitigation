@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Computational Approach to Pollution Mitigation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Computational Approach to Pollution Mitigation</h1>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Live AQI from Simulated Sensor (API)</h2>
+      <div id="pollution-data">Fetching live AQI...</div>
+    </section>
+
+    <section class="container">
+      <h2>Historical Sensor Data (Cloud via Athena)</h2>
+      <p>This table shows simulated AQI and sensor readings fetched from cloud-based storage using AWS Athena over Parquet files stored in S3.</p>
+      <table class="aqi-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>AQI</th>
+            <th>PM2.5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2022-10-24 12:00</td><td>24.5</td><td>62.1</td><td>285</td><td>135.3</td></tr>
+          <tr><td>2022-10-24 14:00</td><td>25.7</td><td>58.9</td><td>310</td><td>144.1</td></tr>
+          <tr><td>2022-10-25 09:00</td><td>23.6</td><td>64.3</td><td>295</td><td>138.6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="container">
+      <h2>System Explanation</h2>
+      <p>We simulate IoT sensor data to monitor air quality metrics like AQI, PM2.5, temperature, and humidity. The architecture uses a computational cloud pipeline — in production, sensor readings would be streamed to S3, processed using AWS Glue, and queried via Athena.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Live data from API | Historical trends from simulated Athena queries</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

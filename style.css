@@ -1,0 +1,24 @@
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+header, footer {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+table.aqi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.aqi-table th, .aqi-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+}
+.aqi-table thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
